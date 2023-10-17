@@ -1,0 +1,35 @@
+Tema 2 - Avioane
+
+Task 1: 
+In acest task am afisat pentru fiecare avion informatiile cerute astfel:
+ - parcurg avioanele cu un for si pentru fiecare afisez informatiile din vectorul generic.
+ - pe prima linie sunt afisate linia si coloana l care se gaseste capul avionului. Astfel afisarm primii 4 octeti. Linia care este de timp unsigned short si coloana care se gaseste la aceeasi adresa numai ca adunam marimea tipului variabilei.
+ - apoi este afisata directia de tipul unsigned char stocata pe un octet si care se gaseste dupa cele 2 short uri. (2 * dimensiunea variabilelor in care sunt pastrate linia si coloana)
+ - apoi afisam litera cu litera codul stocat pe 4 octeti astfel:
+        - afisam cifra care reprezinta tipul avionului aflata la adresa directiei + marimea variabilei (unsigned char)
+        - apoi la fiecare litera din cod adunam 1 pentru a ne muta cu o pozitie mai la dreapta.
+- la final afisam viteza stocata pe 4 octeti ce se afla la adresa cifrei din cod + 4
+- la final incrementam informatia cu 13 (memoria pe care o ocupa informatia unui avion) pentru a putea trece la urmatorul avion.
+
+Task2:
+
+- parcurgem avioanele cu un for
+- initializam de fiecare data variabilele de care avem nevoie ( linie, coloana, directie si tip) folosindu-ne de ce am rezolvat la task1.
+- construim matricea in functie de cele 8 cazuri existente astfel
+    - testam tipul si apoi directia
+    - asezam "*" in matrice comform tipului si directiei pornind de la capul avionului (mat[x][y]="*)
+-la final, ca la task1, in crementam informatia pentru a putea trece la urmatorul avion 
+
+task4:
+
+- initializam variabila de testare (ok) si variabila contor (nr)
+-parcurgem toate avioanele cu un for si initializam aceleasi variabile ca la task ul precedent, in aceeasi maniera.
+- presupunem cu ajutorul variabilei ok ca nu exista obostacole care sa impiedice zborul avioanelor
+- salvam in var1 si var2 coordonatele obstacolului
+- parcurgem cu un for obstacolele si initializam pentru fiecare dintre acestea linia si coloana
+- testam tipul si apoi directia avionului, iar daca un obstacol se afla intre aripa si coada avionului, sau in fata acestuia intrand in aria aripilor, variabila de testare se incarca cu 1
+- la final verificam ce valoare are variabila ok
+- incrementam var1 si var2 pentru a trece la urmatoarele coordonate ale urmatorului obstacol
+- daca ramane 0, numarul avioanelor care nu se lovesc de obstacol creste cu 1, daca nu, ramane nemodificat
+- la final afisam cu ajutorul variabilei "nr", numarul avioanelor ce zboara fara probleme prin matrice.
+    
