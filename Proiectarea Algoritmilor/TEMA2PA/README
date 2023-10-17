@@ -1,0 +1,17 @@
+TEMA 2 PA - Caramida-Stoian Petrisor Cristian
+
+problema 1 : supercomputer 
+
+ - am declarat structurile necesare (fiecare structura este explicata prin comentarii in codul propriu zis)
+ - am realizat o functie pentru crearea unui nou nod de adiacenta
+ - functia addEdge este folosita pentru a adauga o muchie in graf
+ - functia readInput face citirea datelor din fisier (mai multe detalii in comentariile din codul propriu zis)
+ - functia topologicalSort este o funcție care realizează sortarea
+    topologică a grafului și returnează rezultatul sub formă de vector.
+    Inițializează un vector result pentru a stoca rezultatul sortării topologice.
+    Inițializează un vector inDegree pentru a număra numărul de dependențe către fiecare nod.
+    Calculează numărul de dependențe pentru fiecare nod din graf.
+    Apoi, se creează două cozi separate pentru nodurile care au setul de date 1 și, respectiv, 2 și se adaugă nodurile fără dependențe în cozi. Se parcurg coziile într-un loop, extrăgând noduri și actualizând dependențele. Procesul continuă până când ambele cozi devin goale. La final, se verifică dacă există dependențe nesatisfăcute pentru anumite noduri și se returnează rezultatul sortării topologice.
+- functia countContentSwitches determina numarul minim de context switch-uri pe baza sortarii topologice
+
+- complexitatea algoritmuli este  O(N + M)

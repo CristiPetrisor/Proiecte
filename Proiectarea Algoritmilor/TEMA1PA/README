@@ -1,0 +1,11 @@
+    Programul realizat pentru problema 1 (feribot) are la baza algoritul
+de cautare binara. Astfel citim din fisierul "feribot.in" doua numere n si k declarate global
+si cele n greutati stocate in vectorul greutate[].
+    Dupa citirea acestor date, programul gaseste suma acestor numere 
+si pastreaza valoarea maxim in variabila "maxg".
+    Apoi initializam valorile pentru variabilele st și dr, unde st este valoarea maximă din 
+lista de greutati, iar dr este suma tuturor greutatilor. 
+    Dupa aceea, programul realizeaza o caautare binara pentru a gasi cel mai mic numar posibil pentru care funcția "verif" returneaza 1. 
+    Funcția "verif" verifica dacă incarcarea unui feribot cu greutatile date este posibila cu cel mult k incarcari si returneaza 1 
+daca este posibil sau 0 în caz contrar. 
+    La final, valoarea finala este afisata in fisierul "feribot.out".
