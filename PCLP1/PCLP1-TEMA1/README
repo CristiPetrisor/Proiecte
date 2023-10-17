@@ -1,0 +1,22 @@
+Tema este impartita in 3 task-uri
+
+Task1
+- dupa citirea numerelor si a operatiilor (operand[N]), rezultatul final de tip float se initializeaza cu primul numar citit din vector.
+- se parcurge sirul cu operatii si in functie de ce operatie este gasita se realizeaza o serie de adunari, scanderi, inmultiri, impartiri fara sa se tina cont de prioritatea inmultirii & impartirii fara de adunare si scadere. 
+- la final afisam rezultatul final (r).
+
+Task2
+- dupa citirea valorilor numerice si cea a operatiilor realizam o "codare" a elementelor din sirul de operatii pentru a nu fi nevoit sa lucrez cu operatii pe siruri de caractere.
+Astfel, val_1 ia valoarea 1, val_2 ia valoarea 2, etc.
+- parcurgem sirul de caractere si in functie de operatia pe care o gaseste, fiecare pozitie din vector primeste o anumita valoare din cele de sus. De exemplu, adunarea (+) se incarca cu valoarea_1 (val_1), inmultirea (*) se incarca cu valoarea 3 (val_3), etc.
+- parcugem vectorul cu operatii (operanzi[N]) prima data pentru inmultire si impartire deoarece au prioritatea cea mai mare. Daca am gasit o operatie de inmultire (val_3), rezultatul final se incarca cu numarul de pe pozitia operatiei din vectorul de numere, inmultit cu urmatorul numar din vectorul de numere. Apoi se realizeaza stergerea pornind de la pozitia i, atat a numarului aflat pe pozitia j cat si a operatiei aflate pe pozitia j din fiecare vector.
+- acelasi lucru se realizeaza si in cazul in care se gaseste operatia de impartire (val_4)
+
+- parcurgem a doua oara vectorul de operatii (operanzi[N]), dar de data aceasta pentru adunare si scadere. Principiul este identic cu cel prezentat mai sus la inmultire si impartire, doar ca difera operatiile. Stergerile se realizeaza in aceeasi maniera.
+
+- la final, in r se afla rezultatul final
+
+Task3
+-acest task este foarte asemanator cu task-ul 2, singura diferenta fiind facuta de adaugarea unei operatii (#) pe care am codat-o de data aceasta cu valoarea 5 (val_5). La fel ca si in task2, parcurgem prima data vectorul de operatii pentru inmultire si impartire si realizam stergerile aferente din vectori. Parcurgem a doua oara vectorul de operatii, de data aceasta pentru operatia adaugata (#) care calucleaza patratul sumei celor doua numere care se afla inaintea si dupa ea si are prioritate mai mare decat adunarea si scadere, dar mai mica decat inmultirea si impartirea, dupa care se elimina atat numarul aflat inainte cat si operatia din vectori. Ultima parcurgere este facuta pentru adunare si scadere exact ca in task2.
+
+rezultatul final (r) este afisat pe ecran
