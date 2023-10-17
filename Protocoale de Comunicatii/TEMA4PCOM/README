@@ -1,0 +1,40 @@
+README - TEMA 4 PCOM 
+
+Pentru rezolvarea temei 4 am folosit ca baza scheletul laboratorului 10, iar rezolvarea principala se afla in fisierul "client.c". 
+Pentru a verifica programul se vor citi comenzi de la tastatura. 
+Am folosit urmatoarele fisiere: 
+requests.h: Fișierul header care conține funcții pentru construirea cererilor HTTP.
+De asemenea au avut loc mici modificari pentru potrivirea cu cerinta temei in fisierul requests.c preluat tot din laboratorul 10.
+Pentru parsarea obiectelor json am folosit fisierele 'parson.c' si 'parson.h' gasite pe internet.
+
+
+In fisierul client.c:
+
+-Am definit urmatoarele macro-uri:
+JSON_TYPE: Tipul de conținut pentru cererile HTTP care au conținut de tip JSON.
+AUTH_STRING: Antetul de autorizare folosit în cereri.
+URL_REGISTER, URL_LOGIN, URL_ACCESS, URL_BOOKS_LIBRARY, URL_LOGOUT - adresele URL asociate diferitelor funcționalități ale aplicației.
+
+-Functia reg_log_person():
+Această funcție este utilizată pentru înregistrarea și autentificarea unui utilizator. Aceasta solicită de la utilizator un nume de utilizator și o parolă și returnează un șir de caractere JSON care conține aceste informații.
+
+-In functia main: 
+Deschidem conexiunea cu serverul pentru a putea comunica prin comenzile introduse la tastatura. Comunicarea se face pana la exit.
+- register: Permite înregistrarea unui utilizator prin apelul funcției reg_log_person(). Informațiile de înregistrare sunt trimise către server prin intermediul 
+unei cereri POST.
+
+- login: Permite autentificarea unui utilizator prin apelul funcției reg_log_person(). Informațiile de autentificare sunt trimise către server prin intermediul unei cereri POST. Dacă autentificarea este reușită, se primește un token de acces care va fi utilizat în cererile ulterioare.
+
+- logout: Permite delogarea utilizatorului de pe server in orice moment. 
+
+- enter_library : se trimite catre server cererea de a intra in librarie in cazul in care suntem logati. In cazul in care nu suntem logati primim un mesaj de avertisment.
+
+- get_book: iti prezinta informatiile despre o anumita carte in urma introducerii de la tastatura a id-ului. Se formeaza calea si se afiseaza informatiile sub format json.
+
+- get_books: afiseaza lista de carti in format JSON. In cazul in care utilizatorul nu are adaugate carti in libraria sa, se va afisa o lista goala ("[]").
+
+- add_book : Declaram si citim datele necesare (titlu, publicate, etc), vedem daca formatul acestora corespunde si il trimitem catre server-ul json.
+
+- delete_book : folosim acelasi principiu ca si la get_book. Functia verifica daca id-ul corespunde sau nu si in functie de asta afiseaza un mesaj de avertisment sau de validare a actiunii.
+
+
