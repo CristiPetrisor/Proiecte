@@ -1,0 +1,233 @@
+/* Welcome section stilizare */
+
+.welcome {
+  background-color: var(--bg-primary);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.welcome h1,
+.welcome p {
+  color: var(--text-white);
+}
+
+.welcome p {
+  font-size: var(--fs-large);
+  margin-bottom: var(--spacing-medium);
+}
+
+.welcome p:last-of-type {
+  margin-bottom: var(--spacing-large);
+}
+
+.welcome p span {
+  color: var(--text-secondary);
+}
+
+.welcome img {
+  height: 24px;
+  width: auto;
+  margin-left: var(--spacing-medium);
+  position: relative;
+  top: var(--spacing-tiny);
+}
+
+.welcome a {
+  color: var(--text-light);
+  background-color: var(--button-color);
+  font-size: var(--fs-medium);
+  text-align: center;
+  padding: var(--spacing-medium);
+  border: 2px solid var(--button-color);
+  border-radius: 5px;
+  width: 260px;
+}
+
+.welcome a:hover {
+  background-color: transparent;
+}
+
+.welcome .container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+  .welcome a {
+    display: none;
+  }
+
+  .welcome h1 {
+    font-size: 40px;
+  }
+
+  .welcome p:last-of-type {
+    margin-bottom: auto;
+  }
+
+  .welcome img {
+    display: block;
+    margin-top: var(--spacing-medium);
+    margin-left: var(--spacing-small);
+  }
+}
+
+/* Stilizare Cursuri */
+
+.courses h2 {
+  margin: var(--spacing-large) 0;
+  text-align: center;
+}
+
+.courses .containr.grid {
+  padding: var(--spacing-medium) var(--spacing-small);
+}
+
+.courses .courses-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-large);
+}
+
+.courses .courses-wrapper {
+  width: calc(100% / 3);
+  padding-left: var(--spacing-small);
+  padding-right: var(--spacing-small);
+}
+
+.courses .course {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: var(--spacing-tiny);
+}
+
+.courses h3 {
+  color: var(--text-primary);
+  font-weight: 400;
+}
+
+.courses span {
+  font-size: var(--fs-medium);
+  color: var(--text-dark);
+}
+
+.courses .date,
+.courses .place {
+  padding: var(--spacing-tiny);
+}
+
+.courses .place {
+  background-color: var(--text-secondary);
+  margin-left: var(--spacing-tiny);
+}
+
+.courses .material-symbols-outlined {
+  vertical-align: middle;
+}
+
+.courses .bar {
+  height: var(--spacing-tiny);
+  background-color: var(--button-color);
+  border-radius: 10px;
+}
+
+.courses .content {
+  padding: var(--spacing-medium) var(--spacing-small);
+}
+
+@media (max-width: 992px) {
+  .courses .courses-wrapper {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses .courses-wrapper {
+    width: 100%;
+  }
+}
+
+/* Who we are section stilizare */
+
+.who-we-are {
+  background-color: var(--bg-secondary);
+}
+
+.who-we-are .container.grid {
+  padding: var(--spacing-medium) var(--spacing-small);
+}
+
+.who-we-are h2 {
+  padding-top: var(--spacing-large);
+}
+
+.who-we-are h2, .who-we-are p {
+  text-align: center;
+  margin-bottom: var(--spacing-large);
+}
+
+.who-we-are .images-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-large);
+}
+
+.who-we-are .image-wrapper {
+  width: calc(100% / 3);
+  padding-right: var(--spacing-small);
+  padding-left: var(--spacing-small);
+  margin-bottom: var(--spacing-medium);
+}
+
+.who-we-are .image-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 992px) {
+  .who-we-are .image-wrapper {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .who-we-are .image-wrapper {
+    width: calc(100% / 3);
+  }
+}
+
+/* Stilizare parteneri */
+
+.partners h2 {
+  text-align: center;
+  padding: var(--spacing-large);
+}
+
+.partners .partners-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 var(--spacing-xl);
+}
+
+.partners .image-wrapper {
+  width: 100px;
+  margin-left: var(--spacing-xl);
+  margin-right: var(--spacing-xl);
+  margin-bottom: var(--spacing-medium);
+}
+
+.partners .image-wrapper img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+}
+
+.partners .image-wrapper img:hover{
+  filter: grayscale(0);
+}

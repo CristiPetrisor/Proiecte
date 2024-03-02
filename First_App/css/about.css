@@ -1,0 +1,94 @@
+.welcome {
+  background-color: var(--bg-primary);
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Stilizare carduri */
+
+.welcome h1 {
+  text-align: center;
+  color: var(--text-white);
+}
+
+.trainers .container.grid {
+  padding: var(--spacing-medium) var(--spacing-small);
+}
+
+.trainers .trainers-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-large);
+}
+
+.trainers .trainers-wrapper {
+  width: calc(100% / 4);
+  padding: 0 var(--spacing-small);
+}
+
+.trainers .trainer {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: var(--spacing-small);
+    min-height: 350px;
+    margin-top: calc(2 * var(--spacing-xl));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trainer h3 {
+    color: var(--text-secondary);
+    font-weight: 400;
+    text-align: center;
+    font-size: var(--fs-large);
+    background-color: #0b2058;
+    z-index: 1;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: -25px;
+    padding: var(--spacing-tiny);
+    opacity: 0.9;
+    bottom: var(--spacing-medium)
+}
+
+.trainers .image-wrapper {
+    margin-top: -80px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.trainers img {
+    filter: grayscale(100%);
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .welcome h1 {
+        font-size: var(--spacing-large);
+    }
+}
+
+@media (max-width: 992px) {
+    .trainers .trainers-wrapper {
+        width: calc(100% / 3)
+    }
+}
+
+@media (max-width: 768px) {
+    .trainers .trainers-wrapper {
+        width: 50%;
+    }
+}
+@media (max-width: 576px) {
+    .trainers .trainers-wrapper {
+        width: 100%
+    }
+}
