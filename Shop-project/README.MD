@@ -1,1 +1,1 @@
-#A React application that simulates a shopping store.
+# A React application that simulates a shopping store.
