@@ -4,6 +4,7 @@
   - The products can also be added to the favorites list using the specific button
   - Products can also be deleted from the shopping cart or from the favorites list
   - In addition to this, we have also implemented the function of changing the theme from light to dark and vice versa using the button immediately below the header
+# You can see the functionality of the application on this stasckblitz link: https://stackblitz-starters-kavza8.stackblitz.io/
 
 
 
