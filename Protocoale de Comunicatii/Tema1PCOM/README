@@ -1,0 +1,22 @@
+///////////////////////////////////////////////////////////////
+///CARAMIDA-STOIAN PETRISOR-CRISTIAN - TEMA DATAPLANE ROUTER///
+///////////////////////////////////////////////////////////////
+
+* Tema are la baza implementarea laboraturlui 4.
+
+* Descriere functii existente in cod: 
+    get_arp_entry: Aceasta functie primeste ca argument o adresa IP de destinatie si cauta intrarea corespunzatoare in tabela ARP, returnand adresa MAC asociata cu acea adresa.
+
+    longest_prefix_match: Aceasta functie reprezinta implementarea functiei Longest Prefix Match folosita la laborator, insa am aplicat o cautare binara de tipul "better-match" pentru a gasi cel mai bun prefix. Functia primeste ca argumente o adresa IP de destinatie si tabela de rutare, comparand adresa IP de destinatie cu adresele IP din tabela de rutare pentru a gasi cea mai buna potrivire a prefixului. Daca se gaseste, functia returneaza adresa IP asociata prefixului gasit.
+
+    comp: Aceasta functie compara doua adrese IP:
+    - daca sunt egale, returneaza masca mai mare;
+    - in caz contrar, returneaza adresa IP mai mare.
+
+     main: 
+    - citim tabela de rutare si tabela ARP si initializam toate elementele;
+    - sortam tabela de rutare folosind qsort, in functie de adresa IP si masca;
+    - in bucla while, primim pachete si verificam daca totul este in regula (checksum, initializari etc.);
+    - executam algoritmul LPM pentru a gasi ruta;
+    - dupa ce am gasit-o, verificam TTL-ul si, daca este mai mic de 1, trecem la urmatorul pachet;
+    - scadem TTL-ul, recalculam checksum-ul si adresa MAC a urmatoarei destinatii si, prin intermediul functiei send_to_link, facem forward pachetului prin intermediul  interfetei;
